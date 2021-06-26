@@ -1,0 +1,124 @@
+body{
+    font-family: sans-serif;
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.add-comment{
+    position: sticky;
+    top: 0;
+    background-color: #131313;
+    transition: all .3s ease;
+}
+
+.form-comment{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+textarea, input[type='text']{
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    color: white;
+
+    font-size: 20px;
+    transition: all .3s ease;
+}
+
+textarea:focus,
+input[type='text']:focus { 
+    border-bottom: 1px solid white;
+}
+
+.form-comment textarea{
+    resize: vertical;
+    width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+    margin-bottom: 20px;
+}
+
+.form-comment input[type='text']{
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.form-comment input[type='button']{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-comment input[type='button']:hover{
+    background-color: white;
+}
+
+
+.author__logo img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px; 
+    border: 3px solid rgb(255, 255, 255);
+    margin-right: 20px;
+}
+
+.list-comment-item:not(:last-child){
+    border-bottom: 1px solid #232323;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.list-comment-item,
+.author__name,
+.author__content{
+    display: flex;
+}
+
+.author__content{
+    flex-direction: column;
+    width: 100%;
+}
+
+.author__name{
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.author__name span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.author__text{
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.author__datatime{
+    color: grey;
+    font-size: 12px;
+}
+
+.delete-comment{
+    cursor: pointer;
+}
+
+.delete-comment:hover{
+    color: red;
+}
+
+#error-msg{
+    margin-right: auto;
+    color: red;
+}
